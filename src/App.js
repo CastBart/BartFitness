@@ -1,5 +1,7 @@
+import Navigation from "./components/Header/Navigation";
+
 function App() {
-  return <p>This is the start</p>;
+  return <Navigation />
 }
 
 export default App;
