@@ -5,9 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:linear-gradient(rgba(0, 0, 1, 0.164),rgba(0, 0, 1, 0.164)), url('../src/images/background.png');
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

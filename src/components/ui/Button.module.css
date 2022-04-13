@@ -1,0 +1,17 @@
+.button{
+    background: transparent;
+    padding: .5rem 1.5rem;
+    margin: .5rem 1.5rem;
+    border: .15rem solid white;
+    border-radius: 2rem;
+    color: white;
+    transition: ease-in-out all 100ms;
+}
+
+.button:hover{
+    box-shadow: 0 0 .2rem white, 0 0 .2rem inset white;
+}
+.button:active{
+    transform: scale(1.02);
+}
+

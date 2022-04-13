@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 
 const Header = (props) => {
   return (
-    <header>
+    <header className={styles.header}> 
       <Navigation />
     </header>
   );
