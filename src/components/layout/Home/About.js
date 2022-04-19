@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "../ui/Button";
-import Card from "../ui/Card";
+import Button from "../../ui/Button";
+import Card from "../../ui/Card";
 import styles from "./About.module.css";
 
 const About = () => {
   return (
     <Card>
-      <section className={styles.about}>
+      <section id="about" className={styles.about}>
         <h1>About me</h1>
         <p>
           Hi, my name is Bartek, I am a qualified personal trainer at FLYEfit

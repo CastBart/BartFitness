@@ -1,0 +1,52 @@
+.contact{
+    color: white;
+    font-weight: 500;
+    margin-top: 5rem;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.button{
+    width: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: start;
+}
+.info label,
+.info input{
+    margin: 0 1rem;
+}
+.info input{
+    padding: .2rem;
+}
+.name,
+.phone,
+.email {
+    display: flex;
+    flex-direction: column;
+    margin: .2rem 0;
+}
+.name label{
+    width: 100%;
+}
+.message{
+    width: 50%;
+}
+.message div{
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    margin: 0 .2rem;
+}
+.message div textarea{
+    resize: vertical;
+    padding: .2rem;
+    height: 125px;
+}
+.card{
+    padding: 1rem;
+}

@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
+import { HashLink } from "react-router-hash-link";
 
 const Navigation = (props) => {
+
   return (
     <nav className={styles.navigation}>
       <ul>
@@ -13,15 +15,15 @@ const Navigation = (props) => {
             Home
           </NavLink>
         </li>
-        <a href="#about">About</a>
-        <li>
-          <NavLink
-            className={(navData) => (navData.isActive ? styles.active : "")}
-            to="/training-plans"
-          >
-            Training Plans
-          </NavLink>
-        </li>
+        <HashLink smooth to="/home#about">
+          About
+        </HashLink>
+        <HashLink smooth to="/home#plans">
+          Training Programs
+        </HashLink>
+        <HashLink smooth to="/home#contact-me">
+          Contact me
+        </HashLink>
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? styles.active : "")}

@@ -14,7 +14,6 @@ const Plan = (props) => {
         <h2>{props.title}</h2>
         <img src={props.imgSrc} />
         <ul>{liItems}</ul>
-        <Button >Contact me</Button>
       </section>
     </Card>
   );
