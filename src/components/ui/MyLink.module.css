@@ -1,4 +1,5 @@
-.button{
+.link{
+    text-decoration: none;
     background: transparent;
     padding: .5rem 1.5rem;
     margin: .5rem 1.5rem;
@@ -7,22 +8,11 @@
     color: white;
     transition: ease-in-out all 100ms;
     font-weight: 600;
+    width: fit-content;
 }
-
-.button:hover{
+.link:hover{
     box-shadow: 0 0 .2rem white, 0 0 .2rem inset white;
 }
-.button:active{
+.link:active{
     transform: scale(1.02);
-}
-
-button:disabled,
-button:focus:disabled,
-button:hover:disabled,
-button:active:disabled{
-    color: gray;
-    border-color: gray;
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: scale(1);
 }

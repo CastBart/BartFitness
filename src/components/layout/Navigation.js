@@ -10,7 +10,7 @@ const Navigation = (props) => {
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? styles.active : "")}
-            to="/home"
+            to="/home#home-page"
           >
             Home
           </NavLink>

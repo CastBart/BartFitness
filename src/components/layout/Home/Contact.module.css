@@ -9,6 +9,7 @@
 }
 .button{
     width: 100%;
+    align-self: center;
 }
 .info{
     display: flex;
@@ -29,11 +30,14 @@
     display: flex;
     flex-direction: column;
     margin: .2rem 0;
+    justify-content: center;
 }
 .name label{
     width: 100%;
 }
 .message{
+    display: flex;
+    flex-direction: column;
     width: 50%;
 }
 .message div{
@@ -41,11 +45,13 @@
     text-align: start;
     flex-direction: column;
     margin: 0 .2rem;
+    flex-grow: 1;
 }
 .message div textarea{
     resize: vertical;
     padding: .2rem;
-    height: 125px;
+    flex-grow: 1;
+    font-size: 14px;
 }
 .card{
     padding: 1rem;

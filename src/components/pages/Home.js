@@ -5,11 +5,11 @@ import Plans from "../layout/Home/Plans";
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <section id="home-page">
       <About />
       <Plans />
       <Contact />
-    </React.Fragment>
+    </section>
   );
 };
 
