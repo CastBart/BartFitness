@@ -3,18 +3,15 @@ import styles from "./Navigation.module.css";
 import { HashLink } from "react-router-hash-link";
 
 const Navigation = (props) => {
-
   return (
-    <nav className={styles.navigation}>
+    <nav className={styles.navigation} id='navigation' data-visible={false}>
       <ul>
-        <li>
-          <NavLink
-            className={(navData) => (navData.isActive ? styles.active : "")}
-            to="/home#home-page"
-          >
-            Home
-          </NavLink>
-        </li>
+        <NavLink
+          className={(navData) => (navData.isActive ? styles.active : "")}
+          to="/home#home-page"
+        >
+          Home
+        </NavLink>
         <HashLink smooth to="/home#about">
           About
         </HashLink>
@@ -24,14 +21,12 @@ const Navigation = (props) => {
         <HashLink smooth to="/home#contact-me">
           Contact me
         </HashLink>
-        <li>
-          <NavLink
-            className={(navData) => (navData.isActive ? styles.active : "")}
-            to="/blog"
-          >
-            Blog
-          </NavLink>
-        </li>
+        <NavLink
+          className={(navData) => (navData.isActive ? styles.active : "")}
+          to="/blog"
+        >
+          Blog
+        </NavLink>
         {/* <li>
         <NavLink className={(navData)=> navData.isActive ? styles.active : ''} to='/login'>
             Login

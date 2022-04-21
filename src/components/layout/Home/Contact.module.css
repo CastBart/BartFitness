@@ -22,7 +22,14 @@
     margin: 0 1rem;
 }
 .info input{
-    padding: .2rem;
+    padding: .5rem;
+    font-size: 15px;   
+    font-weight: 400; 
+    border: 1px solid gray;
+    border-radius: .3rem;
+}
+.info input:focus{
+    
 }
 .name,
 .phone,
@@ -49,10 +56,16 @@
 }
 .message div textarea{
     resize: vertical;
-    padding: .2rem;
+    padding: .5rem;
+    border-radius: .3rem;
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 15px;
 }
 .card{
     padding: 1rem;
+}
+
+.error input,
+.error textarea{
+    background-color: rgba(187, 67, 67, 0.658);
 }

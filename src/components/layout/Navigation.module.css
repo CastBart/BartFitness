@@ -2,8 +2,16 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #131314;
+  background: hsl(0, 0%, 0%, 0.75);
 }
+
+@supports (backdrop-filter: blur(1rem)) {
+  .navigation {
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+  }
+}
+
 .navigation ul {
   display: flex;
   justify-content: flex-end;
@@ -14,11 +22,11 @@
   display: block;
   text-decoration: none;
   color: white;
-  padding: 0.25rem .5rem;
-  margin: 0 .5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem;
   font-weight: 600;
 
-  background-image:linear-gradient(90deg, #00ADEF, #3131ff);
+  background-image: linear-gradient(90deg, #00adef, #3131ff);
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -28,10 +36,26 @@
   list-style: none;
 }
 
-
 .navigation a:active,
 .navigation a:hover,
-.navigation a.active{
-    background-size: 100% 3px;
+.navigation a.active {
+  background-size: 100% 3px;
 }
 
+
+@media (max-width: 720px){
+  .navigation{
+    inset: 0 0 0 30%;
+    z-index: 10;
+    padding: min(20vh, 2rem) 1em;
+    transform: translateX(100%);
+  }
+  .navigation ul{
+    flex-direction: column;
+  }
+  .navigation a{
+    display: flex;
+    width: fit-content;
+    margin: 1rem;
+  }
+}

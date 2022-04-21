@@ -1,9 +1,16 @@
 import styles from "./Contact.module.css";
 import Button from "../../ui/Button";
 import Card from "../../ui/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import useInput from "../../hooks/use-input";
+
+const isNotEmpty = (value) => value.trim() !== "";
+const isEmail = (value) => value.includes("@");
+const isPhoneNumber = (value) => {
+  const regExp = /08[36579]\d{7}/;
+  return regExp.test(value.trim());
+};
 
 const Contact = () => {
   const [disabled, setDisabled] = useState(true);
@@ -16,7 +23,7 @@ const Contact = () => {
     valueChangeHandler: nameChangeHandler,
     inputBlurHandler: nameBlurHandler,
     reset: resetNameInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isNotEmpty);
 
   // phone validity
   const {
@@ -26,7 +33,7 @@ const Contact = () => {
     valueChangeHandler: phoneChangeHandler,
     inputBlurHandler: phoneBlurHandler,
     reset: resetPhoneInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isPhoneNumber);
 
   // email validity
   const {
@@ -36,7 +43,7 @@ const Contact = () => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isEmail);
 
   // message validity
   const {
@@ -46,18 +53,24 @@ const Contact = () => {
     valueChangeHandler: messageChangeHandler,
     inputBlurHandler: messageBlurHandler,
     reset: resetMessageInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isNotEmpty);
 
   // form validity
-  let formIsValid = false;
-  if (
-    enteredNameIsValid &&
-    enteredEmailIsValid &&
-    enteredPhoneIsValid &&
-    enteredMessageIsValid
-  ) {
-    formIsValid = true;
-  }
+  useEffect(() => {
+    if (
+      enteredNameIsValid &&
+      enteredEmailIsValid &&
+      enteredPhoneIsValid &&
+      enteredMessageIsValid
+    ) {
+      setDisabled(false);
+    }
+  }, [
+    enteredNameIsValid,
+    enteredPhoneIsValid,
+    enteredEmailIsValid,
+    enteredMessageIsValid,
+  ]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -94,7 +107,13 @@ const Contact = () => {
       <Card className={styles.card}>
         <form onSubmit={submitHandler} className={styles.form}>
           <section className={styles.info}>
-            <div className={styles.name}>
+            <div
+              className={
+                nameInputHasError
+                  ? `${styles.name} ${styles.error}`
+                  : `${styles.name}`
+              }
+            >
               <label htmlFor="name">Full Name</label>
               <input
                 id="name"
@@ -105,7 +124,13 @@ const Contact = () => {
                 value={enteredName}
               />
             </div>
-            <div className={styles.phone}>
+            <div
+              className={
+                phoneInputHasError
+                  ? `${styles.phone} ${styles.error}`
+                  : `${styles.phone}`
+              }
+            >
               <label htmlFor="phone">Phone Number</label>
               <input
                 id="phone"
@@ -116,7 +141,13 @@ const Contact = () => {
                 value={enteredPhone}
               />
             </div>
-            <div className={styles.email}>
+            <div
+              className={
+                emailInputHasError
+                  ? `${styles.email} ${styles.error}`
+                  : `${styles.email}`
+              }
+            >
               <label htmlFor="email">Email</label>
               <input
                 id="email"
@@ -128,7 +159,13 @@ const Contact = () => {
               />
             </div>
           </section>
-          <section className={styles.message}>
+          <section
+            className={
+              messageInputHasError
+                ? `${styles.message} ${styles.error}`
+                : `${styles.message}`
+            }
+          >
             <div>
               <label htmlFor="message">Message</label>
               <textarea

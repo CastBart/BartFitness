@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../ui/Button";
 import Card from "../../ui/Card";
 import styles from "./About.module.css";
 
@@ -35,9 +34,6 @@ const About = () => {
           the benefits of personal training. Looking forward to hearing from
           you!
         </p>
-        <div className="centered">
-          <Button>Contact me</Button>
-        </div>
       </section>
     </Card>
   );
