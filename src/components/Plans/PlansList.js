@@ -1,6 +1,5 @@
 import styles from "./PlansList.module.css";
 import Plan from "./Plan";
-import { useEffect } from "react";
 
 import plan1Img from "../../images/plan1.jpg";
 import plan2Img from "../../images/plan2.jpg";

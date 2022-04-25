@@ -63,3 +63,12 @@
   justify-self: center;
   align-self: center;
 }
+@media (max-width: 720px) {
+  .train{
+    flex-direction: column;
+  }
+  .card{
+    margin: auto;
+  }
+  
+}

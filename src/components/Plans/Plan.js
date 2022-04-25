@@ -1,6 +1,5 @@
 import Card from "../ui/Card";
 import styles from "./Plan.module.css";
-import Button from "../ui/Button";
 
 const Plan = (props) => {
   let id = 0;
@@ -12,7 +11,7 @@ const Plan = (props) => {
     <Card className={styles.card}>
       <section key={props.id} className={styles.plan}>
         <h2>{props.title}</h2>
-        <img src={props.imgSrc} />
+        <img src={props.imgSrc} alt='' />
         <ul>{liItems}</ul>
       </section>
     </Card>

@@ -3,8 +3,11 @@ import styles from "./Navigation.module.css";
 import { HashLink } from "react-router-hash-link";
 
 const Navigation = (props) => {
+
+  
+
   return (
-    <nav className={styles.navigation} id='navigation' data-visible={false}>
+    <nav className={styles.navigation} id="navigation" data-visible={props.visible}>
       <ul>
         <NavLink
           className={(navData) => (navData.isActive ? styles.active : "")}

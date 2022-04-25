@@ -12,10 +12,10 @@ const TrainingProgram = (props) => {
 
   return (
     <section className={styles.train}>
-      <Card>
+      <Card className={styles.card}>
         <section key={props.id} className={styles.plan}>
           <h2>{props.title}</h2>
-          <img src={props.imgSrc} />
+          <img src={props.imgSrc} alt=''/>
           <ul>{liItems}</ul>
         </section>
       </Card>
