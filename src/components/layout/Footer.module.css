@@ -1,0 +1,44 @@
+.footer {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+.logo {
+  padding: 1rem 2rem;
+  width: 15rem;
+  height: auto;
+}
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.icon-fb {
+  width: 1rem;
+}
+.icon-fb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.icon-ig {
+  width: 2rem;
+}
+.icon-ig img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (max-width: 720px) {
+    .footer{
+        flex-direction: column;
+    }
+}

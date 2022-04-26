@@ -68,7 +68,7 @@
     flex-direction: column;
   }
   .card{
-    margin: auto;
+    margin: 1rem auto;
   }
   
 }

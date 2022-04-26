@@ -11,7 +11,7 @@ export const programs = [
     title: "One Off Session",
     imgSrc: plan1Img,
     help: ["1 on 1 Coaching Session", "Injury/Pain", "Form Correction"],
-    description: "",
+    description: "In the one off session I can tackle any problems you may have at the gym. By going through a workout of your choice, I offer form correction, any pain that you may have while performing any excercise and give you advise on how to over come the pain. We will talk about dietary topics and will give you advice on that. We will talk about your goals and I will create a workout plan suited to your needs and it will be sent to your email.",
   },
   {
     id: "p2",
