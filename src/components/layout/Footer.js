@@ -10,10 +10,10 @@ const Footer = () => {
         <img src={logoImg} alt="" />
       </div>
       <div className={styles.social}>
-        <div className={styles["icon-fb"]}>
+        <div onClick={() => window.open("https://m.facebook.com/bartek.fitness/", '_blank')} className={styles["icon-fb"]}>
           <img src={fbIcon} />
         </div>
-        <div className={styles["icon-ig"]}>
+        <div onClick={() => window.open("https://www.instagram.com/bartek.fitness/?hl=en", '_blank')} className={styles["icon-ig"]}>
           <img src={igIcon} />
         </div>
       </div>
