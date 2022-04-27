@@ -24,12 +24,13 @@ const Navigation = (props) => {
         <HashLink smooth to="/home#contact-me">
           Contact me
         </HashLink>
-        <NavLink
+        {/* Blog will be added in the future */}
+        {/* <NavLink
           className={(navData) => (navData.isActive ? styles.active : "")}
           to="/blog"
         >
           Blog
-        </NavLink>
+        </NavLink> */}
         {/* <li>
         <NavLink className={(navData)=> navData.isActive ? styles.active : ''} to='/login'>
             Login
